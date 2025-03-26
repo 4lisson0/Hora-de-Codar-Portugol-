@@ -1,18 +1,16 @@
 programa {
   funcao inicio() {
     
-    real pi
-    real r
-    real area
+    cadeia nome
+    inteiro idade
 
-    escreva("Vamos calcular a areá do Circulo  ")
-    escreva("Escreva valor de Pi: ")
-    leia(pi)
-    escreva("Escreva valor do Raio: ")
-    leia(r)
+    escreva("Qual seu nome? ")
+    leia(nome)
 
-    area = pi * (r*r)
+    escreva("Qual sua idade? ")
+    leia(idade)
+    
+    escreva("Olá ", nome, " sua idade é " , idade)
 
-    escreva("Valor da área do Circulo é: ", area)
   }
 }
