@@ -1,29 +1,59 @@
 programa {
   funcao inicio() {
+    // 8. Escreva um programa que calcule a média de quatro números informados pelo usuário, mas somente se esses números 
+    //forem maiores que 0 e menores que 10. No final, se a média for maior que cinco o usuário receberá uma mensagem 
+    //"Você passou no teste". Em qualquer outra situação, ele receberá uma mensagem de "tente novamente"
 
-    //9. Escreva um programa para ler o ano de nascimento de uma pessoa e escrever uma mensagem que diga se ela poderá ou não votar este ano (não é necessário considerar o mês em que ela nasceu).
+    real nota1,nota2,nota3,nota4
+    real media , soma=0
 
-    escreva("Bem-vindo ao será que você pode votar?? \n")
+      escreva("Digite sua primeira nota: ")
+      leia(nota1)
 
-    inteiro ano_nascimento
-    inteiro ano_atual
-    inteiro calculo = 0
+      escreva("Digite sua segunda nota: ")
+      leia(nota2)
 
-    escreva("Qual é o ano atual? ")
-    leia(ano_atual)
-    escreva("Qual é o ano de seu nascimento? ")
-    leia(ano_nascimento)
+      escreva("Digite sua terceira nota: ")
+      leia(nota3)
 
-    calculo = ano_atual - ano_nascimento
+      escreva("Digite sua quarta nota: ")
+      leia(nota4)
 
-    escreva("Sua idade atual é: ", calculo, "\n")
+      se (nota1 >= 0 e nota1 < 11){
+        soma = soma + nota1
 
-    se(calculo < 18){
-      escreva("Você ainda não pode votar")
-    } senao {
-      escreva("Você pode votar")
-    }
+      }senao{
+        escreva("O primeiro numero digitado é invalido")
+      }
 
+      se (nota2 >= 0 e nota2 < 11){
+        soma = soma + nota2
+
+      }senao{
+        escreva("O segundo numero digitado é invalido")
+      }
+
+      se (nota3 >= 0 e nota3 < 11){
+        soma = soma + nota3
+      }senao{
+        escreva("O terceiro numero digitado é invalido")
+      }
+
+      se (nota4 >= 0 e nota4 < 11){
+        soma = soma + nota4
+
+      }senao{
+        escreva("O quarto numero digitado é invalido")
+      }
+
+      media = soma/4
+
+      se(media >= 5.0){
+        escreva("Voce passou no teste!! Parabens")
+      }senao{
+        escreva("Tente novamente!")
+      }
+      
 
   }
 }
